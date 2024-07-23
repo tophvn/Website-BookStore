@@ -72,7 +72,8 @@ if(isset($_POST['update_quantity'])){
             <input type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>" name="cart_quantity" class="qty">
             <input type="submit" value="Cập nhật" class="option-btn" name="update_quantity">
         </form>
-        <div class="sub-total"> Tổng : <span> <?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?> VNĐ</span> </div>
+        <?php $sub_total = $fetch_cart['price'] * $fetch_cart['quantity']; ?>
+        <div class="sub-total"> Tổng : <span> <?php echo number_format($sub_total, 0, ',', '.'); ?> VNĐ</span> </div>
     </div>
     <?php
             $grand_total += $sub_total;
@@ -92,7 +93,6 @@ if(isset($_POST['update_quantity'])){
         <a href="shop.php" class="option-btn">Tiếp tục mua sắm</a>
         <a href="checkout.php" class="btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">Tiến hành thanh toán</a>
     </div>
-
 </section>
 
 <?php @include 'footer.php'; ?>
