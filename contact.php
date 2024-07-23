@@ -46,7 +46,7 @@ if(isset($_POST['send'])){
 
 <section class="heading">
     <h3>Liên hệ với chúng tôi</h3>
-    <p> <a href="home.php">Trang chủ</a> / Liên hệ </p>
+    <p> <a href="index.php">Trang chủ</a> / Liên hệ </p>
 </section>
 <section class="contact">
     <form action="" method="POST">

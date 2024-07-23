@@ -30,7 +30,7 @@ if(!isset($user_id)){
 
 <section class="heading">
     <h3>đơn hàng của bạn</h3>
-    <p> <a href="home.php">Trang chủ</a> / Đơn hàng </p>
+    <p> <a href="index.php">Trang chủ</a> / Đơn hàng </p>
 </section>
 
 <section class="placed-orders">

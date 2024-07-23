@@ -72,7 +72,7 @@ if(isset($_POST['add_to_cart'])){
 
 <section class="heading">
     <h3>Trang tìm kiếm</h3>
-    <p> <a href="home.php">Trang chủ</a> / Tìm kiếm </p>
+    <p> <a href="index.php">Trang chủ</a> / Tìm kiếm </p>
 </section>
 
 <section class="search-form">

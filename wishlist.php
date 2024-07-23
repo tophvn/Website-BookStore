@@ -60,7 +60,7 @@ if(isset($_GET['delete_all'])){
 
 <section class="heading">
     <h3>Danh sách yêu thích của bạn</h3>
-    <p> <a href="home.php">Trang chủ</a> / Danh sách yêu thích </p>
+    <p> <a href="index.php">Trang chủ</a> / Danh sách yêu thích </p>
 </section>
 <section class="wishlist">
     <h1 class="title">Sản phẩm đã thêm</h1>

@@ -65,7 +65,7 @@ if(isset($_POST['order'])){
 
 <section class="heading">
     <h3>Thanh toán đơn hàng</h3>
-    <p> <a href="home.php">Trang chủ</a> / Thanh toán </p>
+    <p> <a href="index.php">Trang chủ</a> / Thanh toán </p>
 </section>
 
 <section class="display-order">

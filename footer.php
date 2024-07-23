@@ -3,7 +3,7 @@
         <!-- Phần liên kết nhanh -->
         <div class="box">
             <h3>Liên kết nhanh</h3>
-            <a href="home.php">Trang chủ</a>
+            <a href="index.php">Trang chủ</a>
             <a href="../about.php">Giới thiệu</a>
             <a href="../contact.php">Liên hệ</a>
             <a href="../shop.php">Cửa hàng</a>

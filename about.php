@@ -28,7 +28,7 @@ if (!isset($user_id)) {
 
 <section class="heading">
     <h3>Về Chúng Tôi</h3>
-    <p> <a href="home.php">Trang Chủ</a> / Về Chúng Tôi </p>
+    <p> <a href="index.php">Trang Chủ</a> / Về Chúng Tôi </p>
 </section>
 
 <section class="about">

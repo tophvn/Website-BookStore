@@ -46,7 +46,7 @@ if(isset($_POST['update_quantity'])){
 
 <section class="heading">
     <h3>Giỏ hàng</h3>
-    <p> <a href="home.php">Trang chủ</a> / Giỏ hàng </p>
+    <p> <a href="index.php">Trang chủ</a> / Giỏ hàng </p>
 </section>
 
 <section class="shopping-cart">

@@ -13,10 +13,10 @@ if (isset($message)) {
 
 <header class="header">
     <div class="flex">
-        <a href="home.php" class="logo">BookStore</a>
+        <a href="index.php" class="logo">BookStore</a>
         <nav class="navbar">
             <ul>
-                <li><a href="home.php">Trang chủ</a></li>
+                <li><a href="index.php">Trang chủ</a></li>
                 <li><a href="#">Trang +</a>
                     <ul>
                         <li><a href="about.php">Giới thiệu</a></li>
