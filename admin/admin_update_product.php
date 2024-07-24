@@ -1,5 +1,5 @@
 <?php
-@include '../config.php'; // Đảm bảo đường dẫn đến tệp config.php là chính xác
+@include '../config.php'; 
 
 session_start();
 
@@ -21,7 +21,7 @@ if (isset($_POST['update_product'])) {
     $image = $_FILES['image']['name'];
     $image_size = $_FILES['image']['size'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
-    $image_folder = __DIR__ . '/../uploaded_img/' . $image;  // Đường dẫn chính xác đến thư mục 'uploaded_img'
+    $image_folder = __DIR__ . '/../uploaded_img/' . $image; 
     $old_image = $_POST['update_p_image'];
 
     if (!empty($image)) {

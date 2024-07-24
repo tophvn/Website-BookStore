@@ -1,13 +1,14 @@
 <?php
-
 @include 'config.php';
 session_start();
 
 $user_id = $_SESSION['user_id'];
 
-if(!isset($user_id)){
-   header('location:login.php');
+if(!isset($_SESSION['user_id'])){
+    header('location:login.php');
+    exit();
 }
+
 
 if(isset($_POST['order'])){
 
@@ -136,15 +137,12 @@ if(isset($_POST['order'])){
                 <input type="number" min="0" name="pin_code" placeholder="Ví dụ: 100000" required>
             </div>
         </div>
-
         <input type="submit" name="order" value="Đặt hàng ngay" class="btn">
-
     </form>
 
 </section>
 
 <?php @include 'footer.php'; ?>
-
 <script src="js/script.js"></script>
 
 </body>

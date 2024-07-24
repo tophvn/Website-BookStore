@@ -1,5 +1,5 @@
 <?php
-@include '../config.php'; // Cập nhật đường dẫn nếu cần
+@include '../config.php'; 
 
 session_start();
 
@@ -18,7 +18,7 @@ if (isset($_POST['add_product'])) {
     $image = $_FILES['image']['name'];
     $image_size = $_FILES['image']['size'];
     $image_tmp_name = $_FILES['image']['tmp_name'];
-    $image_folder = __DIR__ . '/../uploaded_img/' . $image; // Đường dẫn chính xác đến thư mục 'uploaded_img'
+    $image_folder = __DIR__ . '/../uploaded_img/' . $image;
 
     // Kiểm tra tên sản phẩm có tồn tại không
     $select_product_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$name'") or die('Truy vấn thất bại');
@@ -47,17 +47,14 @@ if (isset($_POST['add_product'])) {
 
 if (isset($_GET['delete'])) {
     $delete_id = $_GET['delete'];
-
     // Lấy hình ảnh cũ để xóa
     $select_delete_image = mysqli_query($conn, "SELECT image FROM `products` WHERE id = '$delete_id'") or die('Truy vấn thất bại');
     $fetch_delete_image = mysqli_fetch_assoc($select_delete_image);
     $old_image_path = __DIR__ . '/../uploaded_img/' . $fetch_delete_image['image'];
-
     // Xóa hình ảnh cũ nếu tồn tại
     if (file_exists($old_image_path)) {
         unlink($old_image_path);
     }
-
     // Xóa sản phẩm và các mục liên quan
     mysqli_query($conn, "DELETE FROM `products` WHERE id = '$delete_id'") or die('Truy vấn thất bại');
     mysqli_query($conn, "DELETE FROM `wishlist` WHERE pid = '$delete_id'") or die('Truy vấn thất bại');

@@ -1,5 +1,5 @@
 <?php
-@include '../config.php'; // Cập nhật đường dẫn đến tệp config.php nếu cần
+@include '../config.php';
 
 session_start();
 
