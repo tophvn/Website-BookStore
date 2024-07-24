@@ -1,6 +1,6 @@
 # Trang web bán sách PHP & MySQL
 
-Đây là một dự án trang web bán sách được xây dựng bằng PHP và sử dụng MySQL làm database.
+Đây là một dự án trang web bán sách được xây dựng bằng PHP & MySQL.
 
 ## Cấu trúc thư mục
 
