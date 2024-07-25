@@ -35,7 +35,7 @@
 
 - **git clone**: 
   ```bash
-  git remote add origin https://github.com/tophvn/Website-BookStore.git
+  git clone https://github.com/tophvn/Website-BookStore.git
 - Truy cập **index.php** để xem trang chính của trang web.
 - Đăng nhập hoặc đăng ký tài khoản qua **login.php** và **register.php**.
 - Duyệt sản phẩm qua **shop.php** và xem chi tiết sản phẩm qua **view_page.php**.
