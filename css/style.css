@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 :root {
-   --brown: #AC5743;
+   --brown: #9966FF;
    --red: #c0392b;
    --orange: #f39c12;
    --black: #333;
@@ -10,7 +10,7 @@
    --light-white: #ccc;
    --light-bg: #f5f5f5;
    --border: .2rem solid var(--black);
-   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+   --box-shadow: 0 .5rem 2rem rgba(0, 0, 0, .1);
 }
 
 * {
@@ -172,17 +172,20 @@ section {
    }
 }
 
+
+/* Login - Logout */
+
 .form-container {
    display: flex;
    align-items: center;
    justify-content: center;
-   min-height: 100vh;
+   /* min-height: 100vh; */
 }
 
 .form-container form {
-   padding: 2rem;
-   border-radius: .5rem;
-   border: var(--border);
+   padding: 2%;
+   border-radius: 2%;
+   /* border: var(--border); */
    background-color: var(--white);
    box-shadow: var(--box-shadow);
    width: 50rem;
@@ -190,26 +193,25 @@ section {
 }
 
 .form-container form h3 {
-   font-size: 2.5rem;
+   font-size: 25px;
    text-transform: uppercase;
    color: var(--black);
-   margin-bottom: 1rem;
+   margin-bottom: 2%;
 }
 
 .form-container form .box {
    width: 100%;
-   padding: 1.2rem 1.4rem;
-   font-size: 1.8rem;
+   padding: 12px 14px;
+   font-size: 18px;
    color: var(--black);
-   border: var(--border);
-   background-color: var(--light-bg);
-   margin: 1rem 0;
-   border-radius: .5rem;
+   background-color: gainsboro;
+   margin: 10px 0;
+   border-radius: 10px;
 }
 
 .form-container form p {
-   margin-top: 1.5rem;
-   font-size: 2rem;
+   margin-top: 15px;
+   font-size: 20px;
    color: var(--light-color);
 }
 
@@ -218,9 +220,12 @@ section {
 }
 
 .form-container form p a:hover {
-   text-decoration: underline;
+   color: blue;
+   /* text-decoration: underline; */
 }
 
+
+/* Header */
 .header {
    position: sticky;
    top: 0;
@@ -236,13 +241,13 @@ section {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 1.5rem 2rem;
+   padding: 15px 2px;
    max-width: 1200px;
    position: relative;
 }
 
 .header .flex .logo {
-   font-size: 2.5rem;
+   font-size: 25px;
    color: var(--brown);
 }
 
@@ -256,11 +261,10 @@ section {
 }
 
 .header .flex .navbar ul li a {
-   font-size: 2rem;
-   padding: 1rem 1.5rem;
+   font-size: 20px;
+   padding: 10px 15px;
    display: block;
    color: var(--light-color);
-   text-transform: capitalize;
 }
 
 .header .flex .navbar ul li a:hover {
@@ -271,7 +275,7 @@ section {
 .header .flex .navbar ul li ul {
    position: absolute;
    left: 0;
-   width: 15rem;
+   width: 150px;
    background-color: var(--white);
    animation: fadeIn .2s linear;
    display: none;
@@ -286,8 +290,8 @@ section {
 }
 
 .header .flex .icons>* {
-   font-size: 2.5rem;
-   margin-left: 1rem;
+   font-size: 25px;
+   margin-left: 15px;
    color: var(--black);
    cursor: pointer;
 }
@@ -306,15 +310,15 @@ section {
 
 .header .flex .account-box {
    position: absolute;
-   top: 120%;
-   right: 2rem;
+   top: 110%;
+   right: 2px;
    background-color: var(--white);
-   border: var(--border);
+   /* border: var(--border); */
    text-align: center;
    box-shadow: var(--box-shadow);
-   padding: 2rem;
-   border-radius: .5rem;
-   width: 33rem;
+   padding: 20px;
+   border-radius: 10px;
+   width: 350px;
    display: none;
    animation: fadeIn .2s linear;
 }
@@ -324,19 +328,23 @@ section {
 }
 
 .header .flex .account-box p {
-   padding-bottom: 1rem;
-   font-size: 2rem;
+   padding-bottom: 10px;
+   font-size: 20px;
    color: var(--light-color);
    line-height: 1.5;
 }
 
 .header .flex .account-box p span {
-   color: var(--brown);
+   color: green;
+   font-weight: bold;
 }
 
 .header .flex .account-box .delete-btn {
-   margin-top: .5rem;
+   margin-top: 5px;
 }
+
+
+/* trang index */
 
 .home {
    min-height: 60vh;
@@ -352,8 +360,6 @@ section {
    text-align: center;
 }
 
-
-/*slogan*/
 .home .content h3 {
    text-transform: uppercase;
    color: var(--black);
@@ -366,28 +372,32 @@ section {
    /* Viền chữ đen */
 }
 
+/* thẻ sản phẩm*/
+
 .products .box-container {
-   max-width: 1200px;
-   margin: 0 auto;
+   max-width: 100%;
    display: grid;
-   grid-template-columns: repeat(auto-fit, 33rem);
-   gap: 1.5rem;
+   grid-template-columns: repeat(auto-fit, 320px);
+   gap: 15px;
    align-items: flex-start;
    justify-content: center;
 }
 
 .products .box-container .box {
    background-color: var(--white);
-   border: var(--border);
-   box-shadow: var(--box-shadow);
-   border-radius: .5rem;
-   padding: 2rem;
+   border-radius: 5px;
+   padding: 20px;
    text-align: center;
    position: relative;
 }
 
+.products .box-container .box:hover {
+   box-shadow: var(--box-shadow);
+   border: var(--border);
+}
+
 .products .box-container .box .image {
-   height: 35rem;
+   height: 330px;
    width: 100%;
    object-fit: cover;
 }
@@ -395,16 +405,16 @@ section {
 .products .box-container .box .fa-eye,
 .products .box-container .box .price {
    position: absolute;
-   top: 1rem;
-   border-radius: .5rem;
+   top: 10px;
+   border-radius: 5px;
 }
 
 .products .box-container .box .price {
-   font-size: 2rem;
-   padding: 1rem;
+   font-size: 20px;
+   padding: 10px;
    background-color: var(--brown);
    color: var(--white);
-   left: 1rem;
+   /* left: 1rem; */
 }
 
 .products .box-container .box .fa-eye {
@@ -424,19 +434,20 @@ section {
 }
 
 .products .box-container .box .name {
-   margin: 1rem;
+   margin: 10px;
    font-size: 2rem;
+   font-weight: bold;
    color: var(--black);
 }
 
 .products .box-container .box .qty {
    width: 100%;
-   padding: 1.2rem 1.4rem;
-   font-size: 1.8rem;
+   padding: 12px 14px;
+   font-size: 18px;
    color: var(--black);
    border: var(--border);
-   border-radius: .5rem;
-   margin: .5rem 0;
+   border-radius: 5px;
+   margin: 5px 0;
 }
 
 .products .box-container .box .btn,
@@ -444,8 +455,11 @@ section {
    width: 100%;
 }
 
+/* Chi tiết sản phẩm - view_page */
+
 .quick-view form {
-   max-width: 60rem;
+   max-width: 600px;
+   font-weight: bold;
    padding: 2rem;
    text-align: center;
    border: var(--border);
@@ -456,9 +470,9 @@ section {
 }
 
 .quick-view form .image {
-   height: 33rem;
+   height: 330px;
    border: var(--border);
-   border-radius: .5rem;
+   border-radius: 5px;
 }
 
 .quick-view form .name {
@@ -490,6 +504,8 @@ section {
    margin: .5rem 0;
 }
 
+/* Liên hệ ở trang chủ - index */
+
 .home-contact {
    background-color: var(--black);
    text-align: center;
@@ -517,6 +533,8 @@ section {
    background-color: var(--white);
    color: var(--black);
 }
+
+/* Trang giới thiệu - about */
 
 .about .flex {
    max-width: 1200px;
@@ -592,10 +610,8 @@ section {
 
 .reviews .box-container .box .stars {
    display: inline-block;
-   background: var(--light-bg);
    border-radius: .5rem;
    padding: 1rem 1.5rem;
-   border: var(--border);
 }
 
 .reviews .box-container .box .stars i {
@@ -609,6 +625,8 @@ section {
    color: var(--black);
    margin-top: 1rem;
 }
+
+/* trang liên hệ - contact */
 
 .contact form {
    max-width: 50rem;
@@ -644,6 +662,8 @@ section {
    resize: none;
 }
 
+/* Trang tìm kiếm - search */
+
 .search-form form {
    max-width: 1200px;
    margin: 0 auto;
@@ -666,6 +686,8 @@ section {
    margin-top: 0;
 }
 
+/* Danh sách yêu thích - wishlist */
+
 .wishlist .box-container {
    max-width: 1200px;
    margin: 0 auto;
@@ -680,10 +702,13 @@ section {
    padding: 2rem;
    text-align: center;
    background-color: var(--white);
-   border: var(--border);
-   box-shadow: var(--box-shadow);
    border-radius: .5rem;
    position: relative;
+}
+
+.wishlist .box-container .box:hover {
+   border: var(--border);
+   box-shadow: var(--box-shadow);
 }
 
 .wishlist .box-container .box .image {
@@ -758,6 +783,7 @@ section {
    color: var(--red);
 }
 
+/* Trang giỏ hàng - cart */
 
 .shopping-cart .box-container {
    max-width: 1200px;
@@ -773,10 +799,14 @@ section {
    padding: 2rem;
    text-align: center;
    background-color: var(--white);
-   border: var(--border);
-   box-shadow: var(--box-shadow);
+
    border-radius: .5rem;
    position: relative;
+}
+
+.shopping-cart .box-container .box:hover {
+   border: var(--border);
+   box-shadow: var(--box-shadow);
 }
 
 .shopping-cart .box-container .box .image {
@@ -979,8 +1009,7 @@ section {
    color: var(--brown);
 }
 
-
-
+/* Chân trang */
 
 .footer {
    background-color: var(--white);
@@ -1033,14 +1062,6 @@ section {
 .footer .credit span {
    color: var(--brown);
 }
-
-
-
-
-
-
-
-
 
 
 /* media queries  */

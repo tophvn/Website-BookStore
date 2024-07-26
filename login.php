@@ -31,9 +31,7 @@ if (isset($_POST['submit'])) {
    } else {
       $message[] = 'Email hoặc mật khẩu không đúng!';
    }
-
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -71,8 +69,6 @@ if (isset($message)) {
       <input type="submit" class="btn" name="submit" value="Đăng nhập">
       <p>Chưa có tài khoản? <a href="register.php">Đăng ký ngay</a></p>
    </form>
-
 </section>
-
 </body>
 </html>

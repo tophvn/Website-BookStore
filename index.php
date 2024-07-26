@@ -49,12 +49,10 @@ if (isset($_POST['add_to_cart'])) {
         if (mysqli_num_rows($check_wishlist_numbers) > 0) {
             mysqli_query($conn, "DELETE FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('Lỗi truy vấn');
         }
-
         mysqli_query($conn, "INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image')") or die('Lỗi truy vấn');
         $message[] = 'Sản phẩm đã được thêm vào giỏ hàng.';
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -106,7 +104,9 @@ if (isset($_POST['add_to_cart'])) {
       }
       ?>
    </div>
-   
+   <div class="more-btn">
+      <a href="shop.php" class="option-btn">Toàn bộ</a>
+   </div>
    <br>
    <br>  
    <div class="slideshow-container">
@@ -126,14 +126,12 @@ if (isset($_POST['add_to_cart'])) {
    <br>
    <div style="text-align:center">
 
-   <div class="more-btn">
-      <a href="shop.php" class="option-btn">Xem Thêm</a>
-   </div>
+   
 </section>
 <section class="home-contact">
    <div class="content">
       <h3>Bạn có câu hỏi nào không?</h3>
-      <p>Chúng tôi cảm ơn bạn vì đã quan tâm đến các sản phẩm. Bạn có thể gửi ý kiến của mình cho chúng tôi nếu cần hỗ trợ hay có ===</p>
+      <p>Chúng tôi cảm ơn bạn vì đã quan tâm đến các sản phẩm. Bạn có thể gửi ý kiến của mình cho chúng tôi nếu cần sự hỗ trợ.</p>
       <a href="contact.php" class="btn">Liên hệ với chúng tôi</a>
    </div>
 </section>
@@ -154,7 +152,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 2000);
 }
 </script>
    <span class="dot" onclick="currentSlide(3)"></span> 

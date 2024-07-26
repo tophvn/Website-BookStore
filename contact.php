@@ -10,7 +10,6 @@ if(!isset($user_id)){
 };
 
 if(isset($_POST['send'])){
-
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $number = mysqli_real_escape_string($conn, $_POST['number']);
@@ -50,7 +49,7 @@ if(isset($_POST['send'])){
 </section>
 <section class="contact">
     <form action="" method="POST">
-        <h3>Gửi cho chúng tôi tin nhắn!</h3>
+        <h3>Gửi tin nhắn cho chúng tôi!</h3>
         <input type="text" name="name" placeholder="Nhập tên của bạn" class="box" required> 
         <input type="email" name="email" placeholder="Nhập email của bạn" class="box" required>
         <input type="number" name="number" placeholder="Nhập số điện thoại của bạn" class="box" required>
