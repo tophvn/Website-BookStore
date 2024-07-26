@@ -49,7 +49,8 @@
 - Nếu gặp sự cố, hãy kiểm tra log lỗi PHP và MySQL để xử lý.
 
 ## Tài khoản demo
-User: 123@gmail.com
-Pass: 123
+
+User: `123@gmail.com`  
+Pass: `123`
 
 
