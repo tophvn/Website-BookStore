@@ -1,12 +1,12 @@
 <?php
-@include 'config.php';
+@include 'config/config.php';
 
 session_start();
 
 $user_id = $_SESSION['user_id'];
 
 if (!isset($user_id)) {
-    header('location:login.php');
+    header('location:pages/login.php');
     exit();
 }
 
@@ -69,23 +69,23 @@ if (isset($_POST['add_to_cart'])) {
 </head>
 <body>
    
-<?php @include 'header.php'; ?>
+<?php @include 'components/header.php'; ?>
 <section class="home">
    <div class="content">
       <h3>Sách là tri thức của nhân loại</h3>
-      <a href="about.php" class="btn">Xem Thêm</a>
+      <a href="pages/about.php" class="btn">Xem Thêm</a>
    </div>
 </section>
 <section class="products">
    <h1 class="title">Sản phẩm mới nhất</h1>
    <div class="box-container">
       <?php
-         $select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 6") or die('Lỗi truy vấn');
+         $select_products = mysqli_query($conn, "SELECT * FROM `products` LIMIT 8") or die('Lỗi truy vấn');
          if (mysqli_num_rows($select_products) > 0) {
             while ($fetch_products = mysqli_fetch_assoc($select_products)) {
       ?>
       <form action="" method="POST" class="box">
-         <a href="view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fas fa-eye"></a>
+         <a href="pages/view_page.php?pid=<?php echo $fetch_products['id']; ?>" class="fas fa-eye"></a>
          <div class="price"><?php echo number_format($fetch_products['price'], 0, ',', '.'); ?> VNĐ</div>
          <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="" class="image">
          <div class="name"><?php echo $fetch_products['name']; ?></div>
@@ -105,58 +105,51 @@ if (isset($_POST['add_to_cart'])) {
       ?>
    </div>
    <div class="more-btn">
-      <a href="shop.php" class="option-btn">Toàn bộ</a>
+      <a href="pages/shop.php" class="option-btn">Toàn bộ</a>
    </div>
    <br>
    <br>  
    <div class="slideshow-container">
       <div class="mySlides fade">
          <img src="images/slide1.png" style="width:100%">
-         <div class="text">Kết giới sư</div>
       </div>
       <div class="mySlides fade">
          <img src="images/slide2.png" style="width:100%">
-         <div class="text">Doraemon</div>
       </div>
       <div class="mySlides fade">
          <img src="images/slide3.png" style="width:100%">
-         <div class="text">Yona</div>
       </div>
    </div>
    <br>
    <div style="text-align:center">
-
-   
 </section>
 <section class="home-contact">
    <div class="content">
       <h3>Bạn có câu hỏi nào không?</h3>
       <p>Chúng tôi cảm ơn bạn vì đã quan tâm đến các sản phẩm. Bạn có thể gửi ý kiến của mình cho chúng tôi nếu cần sự hỗ trợ.</p>
-      <a href="contact.php" class="btn">Liên hệ với chúng tôi</a>
+      <a href="pages/contact.php" class="btn">Liên hệ với chúng tôi</a>
    </div>
 </section>
 
-<?php @include 'footer.php'; ?>
+<?php @include 'components/footer.php'; ?>
 <script src="js/script.js"></script>
 
 <script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000);
-}
+   let slideIndex = 0;
+   showSlides();
+   function showSlides() {
+   let i;
+   let slides = document.getElementsByClassName("mySlides");
+   for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+   }
+   slideIndex++;
+   if (slideIndex > slides.length) {slideIndex = 1}
+   slides[slideIndex-1].style.display = "block";
+   setTimeout(showSlides, 2000);
+   }
 </script>
    <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
-
 </body>
 </html>

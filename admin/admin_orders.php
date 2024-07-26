@@ -1,12 +1,12 @@
 <?php
-@include '../config.php'; 
+@include '../config/config.php'; 
 
 session_start();
 
 $admin_id = $_SESSION['admin_id'];
 
 if (!isset($admin_id)) {
-    header('location:../login.php');
+    header('location:../pages/login.php');
     exit();
 }
 

@@ -28,8 +28,8 @@ if (isset($message)) {
         <div class="account-box">
             <p>User: <span><?php echo htmlspecialchars($_SESSION['admin_name']); ?></span></p>
             <p>Email: <span><?php echo htmlspecialchars($_SESSION['admin_email']); ?></span></p>
-            <a href="../logout.php" class="delete-btn">Đăng Xuất</a>
-            <div><a href="../login.php">Đăng Nhập</a> | <a href="../register.php">Đăng Ký</a></div>
+            <a href="../pages/logout.php" class="delete-btn">Đăng Xuất</a>
+            <div><a href="../pages/login.php">Đăng Nhập</a> | <a href="../pages/register.php">Đăng Ký</a></div>
         </div>
     </div>
 </header>
