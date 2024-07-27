@@ -12,8 +12,8 @@ if (!isset($user_id)) {
 
 $message = [];
 
+// Xử lý thêm sản phẩm vào danh sách yêu thích
 if (isset($_POST['add_to_wishlist'])) {
-
     $product_id = mysqli_real_escape_string($conn, $_POST['product_id']);
     $product_name = mysqli_real_escape_string($conn, $_POST['product_name']);
     $product_price = mysqli_real_escape_string($conn, $_POST['product_price']);
@@ -32,6 +32,7 @@ if (isset($_POST['add_to_wishlist'])) {
     }
 }
 
+// Xử lý thêm sản phẩm vào giỏ hàng
 if (isset($_POST['add_to_cart'])) {
     $product_id = mysqli_real_escape_string($conn, $_POST['product_id']);
     $product_name = mysqli_real_escape_string($conn, $_POST['product_name']);
@@ -72,8 +73,8 @@ if (isset($_POST['add_to_cart'])) {
 <?php @include 'components/header.php'; ?>
 <section class="home">
    <div class="content">
-      <h3>Sách là tri thức của nhân loại</h3>
-      <a href="pages/about.php" class="btn">Xem Thêm</a>
+      <!-- <h3>Sách là tri thức của nhân loại</h3>
+      <a href="pages/about.php" class="btn">Xem Thêm</a> -->
    </div>
 </section>
 <section class="products">
@@ -123,6 +124,8 @@ if (isset($_POST['add_to_cart'])) {
    <br>
    <div style="text-align:center">
 </section>
+
+
 <section class="home-contact">
    <div class="content">
       <h3>Bạn có câu hỏi nào không?</h3>

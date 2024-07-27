@@ -115,7 +115,7 @@ section {
    padding: 1.5rem;
    font-size: 2rem;
    color: var(--red);
-   border: var(--border);
+   /* border: var(--border); */
    box-shadow: var(--box-shadow);
    text-align: center;
    background-color: var(--white);
@@ -243,7 +243,7 @@ section {
    align-items: center;
    justify-content: space-between;
    padding: 15px 2px;
-   max-width: 1200px;
+   max-width: 1300px;
    position: relative;
 }
 
