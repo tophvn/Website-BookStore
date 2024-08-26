@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 <?php
-$conn = mysqli_connect('Localhost', 'root', '', 'books_tore');
+$conn = mysqli_connect('localhost', 'root', '', 'shop_db');
 
 // Kiểm tra kết nối
 if (!$conn) {
